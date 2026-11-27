@@ -207,6 +207,14 @@ document.querySelectorAll('.loc__load').forEach((btn) => {
   });
 });
 
+/* ---------------------------------------------------------------- 7. header: folds its info line once the page scrolls */
+{
+  let ticking = false;
+  const set = () => { document.documentElement.classList.toggle('is-scrolled', scrollY > 24); ticking = false; };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(set); } }, { passive: true });
+  set();
+}
+
 /* ---------------------------------------------------------------- 6. ticker pause (moves longer than 5 s) */
 document.querySelectorAll('.ticker').forEach((t) => {
   const b = t.querySelector('.ticker__pause');

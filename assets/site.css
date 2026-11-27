@@ -48,10 +48,73 @@ main > section.band.band:not([data-moment="pinned-chapters"]) { height: auto; mi
 .band--espresso h2 em, .band--espresso .eyebrow { color: var(--gold-soft); }
 .band__word { position: absolute; z-index: -1; right: -2vw; bottom: -6vw; margin: 0; font: 300 clamp(160px, 24vw, 380px)/.8 var(--font-display); letter-spacing: -0.04em; color: rgb(241 240 235 / .05); pointer-events: none; user-select: none; }
 
-/* ---------- nav: cream, the client's logo */
-.nav { background: rgb(241 240 235 / .94); }
-.nav__logo img { display: block; height: 20px; width: auto; }
-@media (max-width: 639px) { .nav__logo img { height: 17px; } }
+/* ---------- header: an espresso info line over a frosted ivory bar, the stacked logo in the middle.
+   Once the page scrolls the info line folds up behind the bar (transform only) and the logo settles a size down. */
+:root { --nav-top: 38px; --nav-bar: 88px; --nav: calc(var(--nav-top) + var(--nav-bar)); }
+@media (max-width: 1023px) { :root { --nav-top: 0px; --nav-bar: 64px; } }
+html { scroll-padding-top: calc(var(--nav-bar) + 16px); }
+
+.nav.nav--docs {
+  height: var(--nav); background: rgb(247 245 240 / .84); color: var(--ink);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3); backdrop-filter: blur(18px) saturate(1.3);
+  border-bottom: 1px solid rgb(178 155 124 / .32);
+  transition: transform 360ms cubic-bezier(.23, 1, .32, 1), box-shadow 360ms cubic-bezier(.23, 1, .32, 1), background-color 200ms ease;
+}
+.nav__top { height: var(--nav-top); background: var(--espresso); color: #e6dccf; overflow: hidden; }
+.nav__top-in { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.nav__top-info, .nav__top-social { display: flex; align-items: center; margin: 0; font-size: 13px; letter-spacing: .04em; white-space: nowrap; }
+.nav__top-info { gap: 14px; }
+.nav__top-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold-soft); }
+.nav__top-social { gap: 24px; }
+.nav__top-social a { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; color: inherit; text-decoration: none; transition: color 150ms ease; }
+.nav__top-social svg { width: 14px; height: 14px; color: var(--gold-soft); }
+@media (hover: hover) and (pointer: fine) { .nav__top-social a:hover { color: var(--cream); } }
+
+.nav--docs .nav__bar { height: var(--nav-bar); }
+.nav--docs .nav__logo picture { display: block; }
+.nav--docs .nav__logo img { display: block; width: auto; height: 50px; transform-origin: center; transition: transform 360ms cubic-bezier(.23, 1, .32, 1); }
+.nav--docs .nav__link { font-size: 15px; letter-spacing: .01em; color: var(--ink); }
+@media (min-width: 1024px) and (max-width: 1279px) { .nav--docs .nav__link { font-size: 14px; padding-inline: 6px; } }
+@media (min-width: 1280px) { .nav--docs .nav__link { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; } }
+.nav--docs .nav__actions { justify-content: flex-end; }
+.nav__cta { display: inline-flex; align-items: center; gap: 10px; height: 48px; padding-inline: 22px 26px; border-radius: 999px; box-shadow: 0 10px 24px -14px rgb(61 43 33 / .7); }
+.nav__cta-ic { width: 17px; height: 17px; flex: none; }
+
+/* scrolled: the info line folds away and the bar casts a soft edge on the page */
+@media (min-width: 1024px) {
+  html.is-scrolled .nav.nav--docs { transform: translateY(calc(-1 * var(--nav-top))); box-shadow: 0 18px 40px -30px rgb(61 43 33 / .5); }
+  html.is-scrolled .nav--docs .nav__logo img { transform: scale(.82); }
+}
+
+/* phone and tablet: the bar alone, the horizontal logo, a round menu button whose two lines become an x */
+@media (max-width: 1023px) {
+  .nav__top { display: none; }
+  .nav--docs .nav__logo img { height: 18px; }
+  .nav--docs .nav__toggle { width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgb(178 155 124 / .5); background: rgb(247 245 240 / .6); }
+  .nav__toggle-lines { position: relative; display: block; width: 18px; height: 10px; }
+  .nav__toggle-lines i { position: absolute; left: 0; right: 0; height: 1.5px; border-radius: 2px; background: currentColor; transition: transform 260ms cubic-bezier(.23, 1, .32, 1), top 260ms cubic-bezier(.23, 1, .32, 1); }
+  .nav__toggle-lines i:first-child { top: 0; }
+  .nav__toggle-lines i:last-child { top: 8.5px; }
+  .nav--docs .nav__toggle[aria-expanded="true"] .nav__toggle-lines i:first-child { top: 4.25px; transform: rotate(45deg); }
+  .nav--docs .nav__toggle[aria-expanded="true"] .nav__toggle-lines i:last-child { top: 4.25px; transform: rotate(-45deg); }
+  /* the open sheet: a frosted ancestor would trap the fixed sheet inside the bar, so the bar turns solid */
+  .nav.nav--docs.is-open { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--cream); }
+  .nav--docs.is-open .nav__links { background: var(--cream); padding-top: 24px; counter-reset: navn; }
+  .nav--docs.is-open .nav__item { border-bottom: 1px solid rgb(178 155 124 / .35); }
+  .nav--docs.is-open .nav__link { height: 72px; font: 300 30px/1 var(--font-display); letter-spacing: -0.01em; text-transform: none; gap: 16px; }
+  .nav--docs.is-open .nav__link::after { counter-increment: navn; content: "0" counter(navn); position: static; order: -1; width: auto; height: auto; background: none; font: 700 12px/1 var(--font-text); letter-spacing: .14em; color: var(--mocha); }
+  .nav--docs.is-open .nav__actions { justify-content: stretch; background: var(--cream); border-top-color: rgb(178 155 124 / .35); }
+  /* the info line lives at the foot of the open sheet, above the action */
+  .nav--docs.is-open .nav__top { display: block; position: fixed; z-index: 52; left: 0; right: 0; bottom: calc(84px + env(safe-area-inset-bottom)); height: auto; background: none; color: var(--muted); }
+  .nav--docs.is-open .nav__top-in { flex-direction: column; align-items: flex-start; gap: 12px; padding-bottom: 20px; }
+  .nav--docs.is-open .nav__top-info { flex-direction: column; align-items: flex-start; gap: 4px; white-space: normal; }
+  .nav--docs.is-open .nav__top-dot { display: none; }
+  .nav--docs.is-open .nav__top-social a { color: var(--espresso); font-weight: 700; min-height: 44px; }
+  .nav--docs.is-open .nav__top-social svg { color: var(--mocha); }
+  .nav--docs.is-open .nav__cta { width: 100%; justify-content: center; height: 52px; }
+}
+@media (prefers-reduced-motion: reduce) { .nav.nav--docs, .nav--docs .nav__logo img, .nav__toggle-lines i { transition: none; } }
+@media (prefers-reduced-transparency: reduce) { .nav.nav--docs { background: var(--ivory); -webkit-backdrop-filter: none; backdrop-filter: none; } }
 
 /* ---------- hero: words left, the doctors in an arch right, the "( )" behind them */
 .hx { background: linear-gradient(180deg, var(--cream) 0%, var(--ivory) 55%, var(--sand) 100%); overflow: clip; }
@@ -298,4 +361,4 @@ footer.closing.footer--visit > .wrap { grid-template-rows: auto auto; height: au
   .qa details::details-content { transition: none; }
   .qa__icon, .reel__pic img, .treat__pic > img, .treat__go::after, .hx__disc, .exp__disc { transition: none; }
 }
-@media (prefers-reduced-transparency: reduce) { .film::backdrop { background: rgb(30 22 17 / .9); } .nav { background: var(--cream); } }
+@media (prefers-reduced-transparency: reduce) { .film::backdrop { background: rgb(30 22 17 / .9); } }
