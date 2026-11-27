@@ -73,12 +73,13 @@ html.is-scrolled .nav--docs .nav__logo img { transform: scale(.9); }
   .nav--docs .nav__actions, .nav:not(.is-open).nav--docs .nav__actions { display: flex !important; }
   .nav--docs .nav__logo img { height: 20px; }
 }
-@media (max-width: 639px) {
-  .nav--docs .nav__logo img { height: 17px; }
-  .nav--docs .nav__cta { height: 44px; padding-inline: 14px 16px; gap: 8px; font-size: 14px; }
-  .nav--docs .nav__cta-ic { width: 15px; height: 15px; }
+/* phone: the bar carries only the logo, centred; the booking buttons live in the sections, so nothing follows the scroll */
+@media (max-width: 767px) {
+  .nav--docs .nav__actions, .nav:not(.is-open).nav--docs .nav__actions { display: none !important; }
+  .nav--docs .nav__bar { justify-content: center; }
+  .nav--docs .nav__logo { margin-inline: auto; }
+  .nav--docs .nav__logo img { height: 19px; transform-origin: center; }
 }
-@media (max-width: 359px) { .nav--docs .nav__cta-ic { display: none; } }
 @media (prefers-reduced-motion: reduce) { .nav.nav--docs, .nav--docs .nav__logo img { transition: none; } }
 @media (prefers-reduced-transparency: reduce) { .nav.nav--docs { background: var(--ivory); -webkit-backdrop-filter: none; backdrop-filter: none; } }
 
@@ -351,3 +352,46 @@ main > section#localizacao.band.band { min-height: 0; }
   .qa__icon, .reel__pic img, .treat__pic > img, .treat__go::after, .hx__disc, .exp__disc { transition: none; }
 }
 @media (prefers-reduced-transparency: reduce) { .film::backdrop { background: rgb(30 22 17 / .9); } }
+
+/* ---------- phone: most sections centre their content (the FAQ answers and the review quotes keep a left edge to read) */
+@media (max-width: 767px) {
+  /* hero */
+  .hx__text { text-align: center; }
+  .hx h1, .hx .hero__lead { margin-inline: auto; }
+  .hx .btn-row { justify-content: center; }
+  .trust { flex-direction: column; justify-content: center; gap: 8px; margin-inline: auto; text-align: center; }
+  /* treatments */
+  .treat__card { text-align: center; }
+  .treat__go { align-self: center; }
+  /* the DOCS */
+  .docs__text { text-align: center; }
+  .docs__text .mo-wh__text { margin-inline: auto; }
+  .person-tile { text-align: center; }
+  /* journey */
+  .mo-pc__text { text-align: center; }
+  .mo-pc__text h2 { margin-inline: auto; }
+  .exp__film { justify-content: center; }
+  .mo-pc__step h3 { justify-content: center; }
+  .mo-pc__step p { margin-inline: auto; }
+  /* patient stories */
+  .stories__head { text-align: center; }
+  .stories__head p:not(.eyebrow) { margin-inline: auto; }
+  .reel { text-align: center; }
+  /* reviews: the head is centred already; the card's stars and author centre, the quote reads from the left */
+  .review { text-align: center; }
+  .review blockquote p { text-align: left; }
+  /* FAQ */
+  .faq-side > h2, .faq-side__lead { text-align: center; margin-inline: auto; }
+  .faq-side > .btn-row { justify-content: center; }
+  /* location */
+  .loc__text { text-align: center; justify-items: center; }
+  .loc__hours { grid-template-columns: auto auto; justify-content: center; text-align: left; width: 100%; }
+  .loc__text .link { justify-self: center; }
+  /* footer */
+  .ft__grid { grid-template-columns: minmax(0, 1fr); text-align: center; }
+  .ft__brand { justify-items: center; margin-inline: auto; }
+  .ft__social { justify-content: center; }
+  .ft__col ul { justify-items: center; }
+  .ft__hours { grid-template-columns: auto auto; justify-content: center; text-align: left; }
+  .ft__legal { align-items: center; text-align: center; }
+}
