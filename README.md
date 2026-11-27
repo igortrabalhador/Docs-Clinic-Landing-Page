@@ -42,7 +42,8 @@ envia `video_open`; abrir o mapa envia `map_open`.
 - Nova foto vertical dos dois doutores (o briefing pede; hoje é a foto do site atual).
 - Fotos dos tratamentos e da jornada são de banco licenciado (Freepik via Magnific), ilustrativas.
 - Depoimentos em vídeo: substituir/ampliar para 3 a 5 relatos curtos com legenda embutida.
-- `og:image` e `canonical` com URL absoluta quando o domínio final estiver definido.
+- Prévia publicada em https://igortrabalhador.github.io/Docs-Clinic-Landing-Page/ (GitHub Pages). Quando o
+  domínio final estiver definido, trocar `og:image`, `og:url` e a imagem do JSON-LD e ativar o `canonical`.
 - Política de privacidade/aviso de cookies (LGPD), já que a página usa GTM, Google Ads e Pixel.
 
 ## Compliance: Casos reais
