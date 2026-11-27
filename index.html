@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" data-type="service" data-radius="soft" data-buttons="tonal" data-motion>
+<html lang="pt-BR" data-type="service" data-radius="soft" data-buttons="pill" data-motion>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -19,29 +19,29 @@
 <meta name="site-kind" content="other">
 <meta name="page-type" content="service">
 
-<!-- Google Tag Manager da DOCS (o mesmo contêiner da página atual: GTM-5GS47JNJ) -->
+<!-- Google Tag Manager da DOCS (o mesmo contêiner da página atual: GTM-5GS47JNJ, com Google Ads e Pixel da Meta) -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5GS47JNJ');</script>
 
-<link rel="preload" href="assets/fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Lato-Light.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" media="(max-width: 639px)" imagesrcset="assets/img/docs-hero-phone-420.webp 420w, assets/img/docs-hero-phone-720.webp 720w" imagesizes="92vw">
-<link rel="preload" as="image" media="(min-width: 640px)" imagesrcset="assets/img/docs-hero-1280.webp 1280w, assets/img/docs-hero-2400.webp 2400w" imagesizes="(max-width: 1023px) 1600px, 90vw">
+<link rel="preload" href="assets/fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Lato-LightItalic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="assets/img/docs-hero-phone-420.webp 420w, assets/img/docs-hero-phone-720.webp 720w" imagesizes="(max-width: 1023px) 92vw, 520px">
 <link rel="stylesheet" href="assets/system.css">
 <link rel="stylesheet" href="assets/ui/cards.css">
 <link rel="stylesheet" href="assets/motion/motion.css">
 <link rel="stylesheet" href="assets/layout/layout.css">
 <style>
 @font-face { font-family: "Lato"; src: url("assets/fonts/Lato-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lato"; src: url("assets/fonts/Lato-LightItalic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; }
 @font-face { font-family: "Lato"; src: url("assets/fonts/Lato-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Lato"; src: url("assets/fonts/Lato-Bold.woff2") format("woff2"); font-weight: 600 700; font-style: normal; font-display: swap; }
 @font-face { font-family: "Lato"; src: url("assets/fonts/Lato-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
-/* the client's palette (manual de marca: #F1F0EB, #4F392C, #B29B7C, #D1CDC2) through start.mjs brand;
-   the type is the client's own Lato instead of the dealt Onest (pedido do cliente) */
+@font-face { font-family: "Lato"; src: url("assets/fonts/Lato-Bold.woff2") format("woff2"); font-weight: 600 700; font-style: normal; font-display: swap; }
+/* the client's palette (manual de marca: #F1F0EB, #4F392C, #B29B7C, #D1CDC2) and the client's Lato */
 :root {
-  --p-bg: #f1f0eb; --p-surface: #e7e3da; --p-ink: #2e2119; --p-muted: #6b5b4e;
+  --p-bg: #f1f0eb; --p-surface: #e9e3d8; --p-ink: #2e2119; --p-muted: #6b5b4e;
   --p-accent: #4f392c; --p-accent-ink: #f1f0eb; --p-action: #4f392c; --p-action-ink: #f1f0eb;
-  --p-inv-bg: #2e2119; --p-inv-surface: #3a2d25; --p-inv-ink: #f1f0eb; --p-inv-muted: #c9bfb4;
-  --p-inv-accent: #f1f0eb; --p-inv-accent-ink: #2e2119; --p-inv-action: #f1f0eb; --p-inv-action-ink: #2e2119;
+  --p-inv-bg: #4f392c; --p-inv-surface: #5c4537; --p-inv-ink: #f1f0eb; --p-inv-muted: #d6c8b8;
+  --p-inv-accent: #f1f0eb; --p-inv-accent-ink: #2e2119; --p-inv-action: #f1f0eb; --p-inv-action-ink: #4f392c;
   --font-display: "Lato", system-ui, sans-serif;
   --font-text: "Lato", system-ui, sans-serif;
   --display-weight: 300;
@@ -74,14 +74,14 @@
 </script>
 </head>
 <!-- type: service (clínica de odontologia estética)
-     deal: hero film, nav split, close: nenhum (o briefing pede que a página termine no mapa, sem CTA final),
-     footer simples, rhythm surface-pairs, buttons tonal, mark: o logo da DOCS
-     moments: word-highlight em #docs (a frase sobre complementaridade acende palavra por palavra),
-              pinned-chapters em #experiencia (as quatro etapas da jornada, uma foto por etapa) -->
+     direção visual (pedido do cliente, com referências): faixas de cor da marca alternando por seção, títulos em
+     Lato Light com palavras de destaque em itálico, foto dos doutores em moldura em arco, faixa corrida de
+     tratamentos, o "( )" do logo como marca d'água.
+     moments: word-highlight em #docs, pinned-chapters em #experiencia -->
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GS47JNJ" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 
-<header class="nav nav--split">
+<header class="nav">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Pular para o conteúdo</a>
     <a class="nav__logo" href="#top" aria-label="DOCS Clinic, voltar ao início"><img src="assets/img/logo-docs-h-240.png" alt="DOCS Clinic" width="240" height="43"></a>
@@ -101,66 +101,89 @@
 </header>
 
 <main id="top">
-  <!-- 01 HERO: a foto dos dois profissionais (foto atual do site; o briefing pede uma nova sessão vertical) -->
-  <section class="hero hero--film" data-enter aria-labelledby="hero-h">
-    <div class="wrap"><div class="hero-text hero__in">
-      <div class="hero__media hero__fill">
-        <picture class="hero__pic"><source media="(max-width: 639px)" srcset="assets/img/docs-hero-phone-420.webp 420w, assets/img/docs-hero-phone-720.webp 720w" sizes="92vw" width="720" height="1200"><img src="assets/img/docs-hero-2400.webp" srcset="assets/img/docs-hero-1280.webp 1280w, assets/img/docs-hero-2400.webp 2400w" sizes="(max-width: 1023px) 1600px, 90vw" width="2400" height="1500" alt="Dra. Mariana Mascarenhas e Dr. Daniel Ravagnani, de jaleco branco, na sala da DOCS com vista para São Paulo" style="--ly-pos: 72% 30%; --ly-pos-phone: 67% 0%" fetchpriority="high" data-source="client" data-subject="os dois doutores da DOCS"></picture>
-        <div class="hero__over">
-          <div>
-            <p class="hero__kicker">Odontologia estética na Berrini, São Paulo</p>
-            <h1 id="hero-h">Um sorriso mais harmônico começa com um planejamento feito para você.</h1>
-            <p class="hero__lead">Na DOCS, Dr. Daniel e Dra. Mariana unem diferentes especialidades para planejar tratamentos estéticos com naturalidade, proporção e cuidado em cada detalhe.</p>
-            <div class="btn-row">
-              <a class="btn btn--primary" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-cta="hero">Agendar avaliação</a>
-            </div>
-            <!-- faixa de confiança: o número de avaliações vem do perfil Google (62 em 27/11/2026); atualizar com rotina definida -->
-            <p class="trust"><span class="trust__stars" aria-hidden="true">★★★★★</span> <b>5,0 no Google</b> · Berrini, São Paulo · Atendimento com hora marcada</p>
-          </div>
-          <a class="ly-play" href="https://www.instagram.com/reel/DTd70xPDhfl/" target="_blank" rel="noopener" data-reel="DTd70xPDhfl" data-reel-title="Conheça a experiência DOCS">
-            <span class="ly-play__disc"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4.5 2.6v12.8c0 .8.9 1.3 1.6.9l10.3-6.4c.6-.4.6-1.3 0-1.7L6.1 1.7c-.7-.4-1.6.1-1.6.9Z" fill="currentColor"/></svg></span>
-            <span class="ly-play__label">Conheça a experiência DOCS<small>Vídeo da clínica, sem som automático</small></span>
-          </a>
+  <!-- 01 HERO: os dois doutores em moldura em arco; o "( )" da marca ao fundo -->
+  <section class="hero hx" data-enter aria-labelledby="hero-h">
+    <svg class="hx__mark" viewBox="0 0 400 320" aria-hidden="true" focusable="false"><path d="M150 8C70 22 18 86 18 160s52 138 132 152v-16C88 280 48 226 48 160S88 40 150 24Z"/><path d="M250 8c80 14 132 78 132 152s-52 138-132 152v-16c62-16 102-70 102-136S312 40 250 24Z"/></svg>
+    <div class="wrap"><div class="hero-text hx__grid">
+      <div class="hx__text">
+        <p class="eyebrow">Odontologia estética na Berrini, São Paulo</p>
+        <h1 id="hero-h">Um sorriso mais harmônico começa com um <em>planejamento feito para você.</em></h1>
+        <p class="hero__lead">Na DOCS, Dr. Daniel e Dra. Mariana unem diferentes especialidades para planejar tratamentos estéticos com naturalidade, proporção e cuidado em cada detalhe.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-cta="hero">Agendar avaliação</a>
+        </div>
+        <!-- faixa de confiança: 62 avaliações em 27/11/2026; atualizar com rotina definida -->
+        <div class="trust">
+          <img src="assets/icons/google-icon.svg" alt="" width="22" height="22">
+          <p><span class="trust__stars" aria-hidden="true">★★★★★</span> <b>5,0 no Google</b><br><span>Berrini, São Paulo · Atendimento com hora marcada</span></p>
         </div>
       </div>
+      <figure class="hx__photo" data-enter-media>
+        <picture>
+          <source media="(max-width: 1023px)" srcset="assets/img/docs-hero-phone-420.webp 420w, assets/img/docs-hero-phone-720.webp 720w" sizes="92vw" width="720" height="1200">
+          <img src="assets/img/docs-hero-phone-720.webp" srcset="assets/img/docs-hero-phone-420.webp 420w, assets/img/docs-hero-phone-720.webp 720w" sizes="520px" width="720" height="1200" alt="Dra. Mariana Mascarenhas e Dr. Daniel Ravagnani, de jaleco branco, na sala da DOCS com vista para São Paulo" fetchpriority="high" data-source="client" data-subject="os dois doutores da DOCS">
+        </picture>
+        <a class="hx__play" href="https://www.instagram.com/reel/DTd70xPDhfl/" target="_blank" rel="noopener" data-reel="DTd70xPDhfl" data-reel-title="Conheça a experiência DOCS">
+          <span class="hx__disc" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4.5 2.6v12.8c0 .8.9 1.3 1.6.9l10.3-6.4c.6-.4.6-1.3 0-1.7L6.1 1.7c-.7-.4-1.6.1-1.6.9Z" fill="currentColor"/></svg></span>
+          <span>Conheça a experiência DOCS</span>
+        </a>
+      </figure>
     </div></div>
   </section>
 
-  <!-- 02 TRATAMENTOS: imagem + título + uma frase; o card inteiro leva ao WhatsApp com o tratamento na mensagem -->
-  <section class="section" id="tratamentos" aria-labelledby="trat-h">
+  <!-- faixa corrida dos tratamentos (pausa no toque, no foco, no botão e sob movimento reduzido) -->
+  <div class="ticker" aria-label="Tratamentos da DOCS">
+    <div class="ticker__track" aria-hidden="true">
+      <span>Lentes de porcelana</span><i>( )</i><span>Lentes híbridas</span><i>( )</i><span>Lentes em resina</span><i>( )</i><span>Invisalign</span><i>( )</i><span>Planejamento individualizado</span><i>( )</i>
+      <span>Lentes de porcelana</span><i>( )</i><span>Lentes híbridas</span><i>( )</i><span>Lentes em resina</span><i>( )</i><span>Invisalign</span><i>( )</i><span>Planejamento individualizado</span><i>( )</i>
+    </div>
+    <p class="sr-only">Lentes de porcelana, lentes híbridas, lentes em resina, Invisalign e planejamento individualizado.</p>
+    <button class="ticker__pause" type="button" aria-pressed="false" aria-label="Pausar a faixa de tratamentos">
+      <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9M11 3.5v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2v9.6l7.5-4.8z" fill="currentColor"/></svg>
+    </button>
+  </div>
+
+  <!-- 02 TRATAMENTOS (faixa areia): imagem + título + uma frase; o card leva ao WhatsApp com o tratamento -->
+  <section class="section band band--sand" id="tratamentos" aria-labelledby="trat-h">
     <div class="wrap">
-      <div class="section-head">
-        <h2 id="trat-h">O que você deseja transformar no seu sorriso?</h2>
+      <div class="head head--center">
+        <p class="eyebrow">Tratamentos</p>
+        <h2 id="trat-h">O que você deseja <em>transformar</em> no seu sorriso?</h2>
         <p>Conheça algumas das soluções planejadas pela DOCS de acordo com as necessidades de cada sorriso.</p>
       </div>
       <ul class="grid treat" role="list">
         <li class="span-3">
-          <a class="card card--open treat__card" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20Invisalign." target="_blank" rel="noopener" data-cta="tratamento-invisalign">
-            <div class="panel panel--top treat__pic"><img class="frame__img" src="assets/img/trat-invisalign-520.webp" srcset="assets/img/trat-invisalign-520.webp 520w, assets/img/trat-invisalign-960.webp 960w" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 300px" width="960" height="1200" alt="Mulher sorrindo segura um alinhador transparente" loading="lazy" data-source="library" data-subject="alinhador transparente"></div>
+          <a class="card treat__card" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20Invisalign." target="_blank" rel="noopener" data-cta="tratamento-invisalign">
+            <div class="treat__pic"><img src="assets/img/trat-invisalign-560.webp" srcset="assets/img/trat-invisalign-560.webp 560w, assets/img/trat-invisalign-960.webp 960w" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 300px" width="960" height="1248" alt="Mulher sorrindo segura um alinhador transparente" loading="lazy" data-source="library" data-subject="alinhador transparente"></div>
+            <span class="treat__n">01</span>
             <h3>Invisalign</h3>
             <p>Alinhadores transparentes para corrigir o posicionamento dos dentes com mais discrição no dia a dia.</p>
             <span class="treat__go">Agendar avaliação</span>
           </a>
         </li>
         <li class="span-3">
-          <a class="card card--open treat__card" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20lentes%20de%20porcelana." target="_blank" rel="noopener" data-cta="tratamento-porcelana">
-            <div class="panel panel--top treat__pic"><img class="frame__img" src="assets/img/trat-porcelana-520.webp" srcset="assets/img/trat-porcelana-520.webp 520w, assets/img/trat-porcelana-960.webp 960w" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 300px" width="960" height="1200" alt="Mulher de camisa branca sorrindo de olhos fechados" loading="lazy" data-source="library" data-subject="sorriso natural"></div>
+          <a class="card treat__card" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20lentes%20de%20porcelana." target="_blank" rel="noopener" data-cta="tratamento-porcelana">
+            <div class="treat__pic"><img src="assets/img/trat-porcelana-560.webp" srcset="assets/img/trat-porcelana-560.webp 560w, assets/img/trat-porcelana-960.webp 960w" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 300px" width="960" height="1248" alt="Retrato de mulher sorrindo, blusa marfim e luz quente" loading="lazy" data-source="library" data-subject="sorriso natural"></div>
+            <span class="treat__n">02</span>
             <h3>Lentes de porcelana</h3>
             <p>Para quem deseja ajustar forma, proporção e cor com planejamento personalizado e foco em naturalidade.</p>
             <span class="treat__go">Agendar avaliação</span>
           </a>
         </li>
         <li class="span-3">
-          <a class="card card--open treat__card" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20lentes%20h%C3%ADbridas." target="_blank" rel="noopener" data-cta="tratamento-hibridas">
-            <div class="panel panel--top treat__pic"><img class="frame__img" src="assets/img/trat-hibridas-520.webp" srcset="assets/img/trat-hibridas-520.webp 520w, assets/img/trat-hibridas-960.webp 960w" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 300px" width="960" height="1200" alt="Retrato de mulher sorrindo com a mão no queixo, fundo bege" loading="lazy" data-source="library" data-subject="sorriso"></div>
+          <a class="card treat__card" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20lentes%20h%C3%ADbridas." target="_blank" rel="noopener" data-cta="tratamento-hibridas">
+            <div class="treat__pic"><img src="assets/img/trat-hibridas-560.webp" srcset="assets/img/trat-hibridas-560.webp 560w, assets/img/trat-hibridas-960.webp 960w" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 300px" width="960" height="1248" alt="Mulher sorrindo com a mão no ombro, fundo bege" loading="lazy" data-source="library" data-subject="sorriso"></div>
+            <span class="treat__n">03</span>
             <h3>Lentes híbridas</h3>
             <p>Uma alternativa estética planejada conforme as características do sorriso e os objetivos do tratamento.</p>
             <span class="treat__go">Agendar avaliação</span>
           </a>
         </li>
         <li class="span-3">
-          <a class="card card--open treat__card" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20lentes%20em%20resina." target="_blank" rel="noopener" data-cta="tratamento-resina">
-            <div class="panel panel--top treat__pic"><img class="frame__img" src="assets/img/trat-resina-520.webp" srcset="assets/img/trat-resina-520.webp 520w, assets/img/trat-resina-960.webp 960w" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 300px" width="960" height="1200" alt="Sorriso aberto em close, mãos no rosto, fundo marrom" loading="lazy" data-source="library" data-subject="sorriso em close"></div>
+          <a class="card treat__card" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20lentes%20em%20resina." target="_blank" rel="noopener" data-cta="tratamento-resina">
+            <div class="treat__pic"><img src="assets/img/trat-resina-560.webp" srcset="assets/img/trat-resina-560.webp 560w, assets/img/trat-resina-960.webp 960w" sizes="(max-width: 639px) 92vw, (max-width: 1023px) 46vw, 300px" width="960" height="1248" alt="Sorriso aberto em close, mão no queixo, fundo terracota" loading="lazy" data-source="library" data-subject="sorriso em close"></div>
+            <span class="treat__n">04</span>
             <h3>Lentes em resina</h3>
             <p>Transformação direta, esculpida dente a dente para equilibrar forma, textura, cor e proporção.</p>
             <span class="treat__go">Agendar avaliação</span>
@@ -170,12 +193,14 @@
     </div>
   </section>
 
-  <!-- 03 SOBRE OS DOCS: a frase acende palavra por palavra (word-highlight); retratos recortados da foto atual.
+  <!-- 03 SOBRE OS DOCS (faixa café): a frase acende palavra por palavra; os retratos são o "(" e o ")" do logo.
        TODO cliente: nome completo, CRO e área de atuação validados de cada profissional -->
-  <section class="section" id="docs" aria-labelledby="docs-h">
+  <section class="section band band--espresso" id="docs" aria-labelledby="docs-h">
+    <p class="band__word" aria-hidden="true">DOCS</p>
     <div class="wrap grid grid--top docs">
       <div class="span-6 docs__text" data-moment="word-highlight">
-        <h2 id="docs-h">Dois profissionais. <span class="muted">Um planejamento pensado em conjunto.</span></h2>
+        <p class="eyebrow">Os DOCS</p>
+        <h2 id="docs-h">Dois profissionais. <em>Um planejamento pensado em conjunto.</em></h2>
         <p class="mo-wh__text">Na DOCS, Dr. Daniel e Dra. Mariana combinam olhares <strong>complementares</strong> para construir um plano de tratamento individualizado, respeitando estética, função e as características de cada paciente.</p>
       </div>
       <ul class="docs__people" role="list">
@@ -195,32 +220,33 @@
     </div>
   </section>
 
-  <!-- 04 EXPERIÊNCIA DOCS: pinned-chapters segura a seção enquanto as quatro etapas abrem uma a uma -->
-  <section class="section" id="experiencia" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="exp-h">
+  <!-- 04 EXPERIÊNCIA DOCS (marfim): pinned-chapters segura a seção enquanto as quatro etapas abrem uma a uma -->
+  <section class="section band band--cream" id="experiencia" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="exp-h">
     <div class="wrap mo-pc__grid">
       <div class="mo-pc__text">
-        <h2 id="exp-h">Veja como acontece a sua jornada na DOCS</h2>
-        <button class="link exp__film" type="button" data-reel="DTd70xPDhfl" data-reel-title="Conheça a experiência DOCS">Assistir ao vídeo da clínica</button>
+        <p class="eyebrow">A jornada</p>
+        <h2 id="exp-h">Veja como acontece a <em>sua jornada</em> na DOCS</h2>
+        <button class="exp__film" type="button" data-reel="DTd70xPDhfl" data-reel-title="Conheça a experiência DOCS"><span class="exp__disc" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4.5 2.6v12.8c0 .8.9 1.3 1.6.9l10.3-6.4c.6-.4.6-1.3 0-1.7L6.1 1.7c-.7-.4-1.6.1-1.6.9Z" fill="currentColor"/></svg></span>Assistir ao vídeo da clínica</button>
         <ol class="mo-pc__steps">
           <li class="mo-pc__step">
-            <h3>1. Avaliação</h3>
+            <h3><span class="step__n">01</span>Avaliação</h3>
             <p>Entender o que incomoda você e o que deseja melhorar.</p>
-            <figure class="mo-pc__visual"><img src="assets/img/jornada-avaliacao-1400.webp" srcset="assets/img/jornada-avaliacao-800.webp 800w, assets/img/jornada-avaliacao-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="1120" alt="Dentista conversa com paciente sentada à mesa do consultório" loading="lazy" data-source="library" data-subject="conversa de avaliação"></figure>
+            <figure class="mo-pc__visual"><img src="assets/img/jornada-avaliacao-1400.webp" srcset="assets/img/jornada-avaliacao-800.webp 800w, assets/img/jornada-avaliacao-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="1120" alt="Dentista conversa com a paciente em um consultório claro, com janela ampla" loading="lazy" data-source="library" data-subject="conversa de avaliação"></figure>
           </li>
           <li class="mo-pc__step">
-            <h3>2. Planejamento</h3>
+            <h3><span class="step__n">02</span>Planejamento</h3>
             <p>Definir possibilidades e indicação de forma individualizada.</p>
-            <figure class="mo-pc__visual"><img src="assets/img/jornada-planejamento-1400.webp" srcset="assets/img/jornada-planejamento-800.webp 800w, assets/img/jornada-planejamento-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="1120" alt="Dentista mostra o plano em um tablet para a paciente na cadeira" loading="lazy" data-source="library" data-subject="planejamento"></figure>
+            <figure class="mo-pc__visual"><img src="assets/img/jornada-planejamento-1400.webp" srcset="assets/img/jornada-planejamento-800.webp 800w, assets/img/jornada-planejamento-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="1120" alt="Dentista mostra o escaneamento digital dos dentes em um tablet para a paciente" loading="lazy" data-source="library" data-subject="planejamento digital"></figure>
           </li>
           <li class="mo-pc__step">
-            <h3>3. Tratamento</h3>
+            <h3><span class="step__n">03</span>Tratamento</h3>
             <p>Executar o plano indicado com acompanhamento próximo.</p>
-            <figure class="mo-pc__visual"><img src="assets/img/jornada-tratamento-1400.webp" srcset="assets/img/jornada-tratamento-800.webp 800w, assets/img/jornada-tratamento-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="1120" alt="Paciente conversa com a dentista antes do atendimento" loading="lazy" data-source="library" data-subject="tratamento"></figure>
+            <figure class="mo-pc__visual"><img src="assets/img/jornada-tratamento-1400.webp" srcset="assets/img/jornada-tratamento-800.webp 800w, assets/img/jornada-tratamento-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="1120" alt="Dentista e paciente escolhem a cor na escala de tons" loading="lazy" data-source="library" data-subject="escolha de cor"></figure>
           </li>
           <li class="mo-pc__step">
-            <h3>4. Acompanhamento</h3>
+            <h3><span class="step__n">04</span>Acompanhamento</h3>
             <p>Revisões e orientações para preservar saúde e resultado.</p>
-            <figure class="mo-pc__visual"><img src="assets/img/jornada-acompanhamento-1400.webp" srcset="assets/img/jornada-acompanhamento-800.webp 800w, assets/img/jornada-acompanhamento-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="1120" alt="Paciente confere o sorriso no espelho ao lado da dentista" loading="lazy" data-source="library" data-subject="acompanhamento"></figure>
+            <figure class="mo-pc__visual"><img src="assets/img/jornada-acompanhamento-1400.webp" srcset="assets/img/jornada-acompanhamento-800.webp 800w, assets/img/jornada-acompanhamento-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="1120" alt="Paciente sorri olhando o espelho ao lado da dentista" loading="lazy" data-source="library" data-subject="acompanhamento"></figure>
           </li>
         </ol>
       </div>
@@ -228,27 +254,26 @@
     </div>
   </section>
 
-  <!-- 05 HISTÓRIAS DE PACIENTES: relatos reais publicados no Instagram; tocam só sob demanda.
+  <!-- 05 HISTÓRIAS DE PACIENTES (faixa greige): relatos reais publicados no Instagram; tocam só ao toque.
        TODO cliente: trocar/acrescentar até 5 depoimentos curtos com legenda embutida -->
-  <section class="section" id="historias" aria-labelledby="hist-h">
+  <section class="section band band--greige" id="historias" aria-labelledby="hist-h">
     <div class="wrap grid grid--top stories">
-      <div class="span-6 section-head stories__head">
-        <h2 id="hist-h">Experiências de quem escolheu a DOCS</h2>
+      <div class="span-6 stories__head">
+        <p class="eyebrow">Histórias de pacientes</p>
+        <h2 id="hist-h">Experiências de quem <em>escolheu a DOCS</em></h2>
         <p>O que incomodava, por que escolheram a clínica e como foi o caminho, na voz dos pacientes.</p>
         <a class="link" href="https://www.instagram.com/docs.clinic/" target="_blank" rel="noopener">Mais relatos no Instagram da DOCS</a>
       </div>
       <ul class="stories__reels" role="list">
         <li class="span-3">
           <button class="reel" type="button" data-reel="DCXAadDxXeZ" data-reel-title="Ela não sorria há mais de 20 anos">
-            <span class="reel__pic"><img src="assets/img/reel-DCXAadDxXeZ-720.webp" srcset="assets/img/reel-DCXAadDxXeZ-360.webp 360w, assets/img/reel-DCXAadDxXeZ-720.webp 720w" sizes="(max-width: 639px) 44vw, 280px" width="720" height="1280" alt="" loading="lazy" data-source="client" data-subject="relato de paciente"></span>
-            <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4.5 2.6v12.8c0 .8.9 1.3 1.6.9l10.3-6.4c.6-.4.6-1.3 0-1.7L6.1 1.7c-.7-.4-1.6.1-1.6.9Z" fill="currentColor"/></svg></span>
+            <span class="reel__pic"><img src="assets/img/reel-DCXAadDxXeZ-720.webp" srcset="assets/img/reel-DCXAadDxXeZ-360.webp 360w, assets/img/reel-DCXAadDxXeZ-720.webp 720w" sizes="(max-width: 639px) 44vw, 280px" width="720" height="1280" alt="" loading="lazy" data-source="client" data-subject="relato de paciente"><span class="reel__play" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4.5 2.6v12.8c0 .8.9 1.3 1.6.9l10.3-6.4c.6-.4.6-1.3 0-1.7L6.1 1.7c-.7-.4-1.6.1-1.6.9Z" fill="currentColor"/></svg></span></span>
             <span class="reel__title">Ela não sorria há mais de 20 anos</span>
           </button>
         </li>
         <li class="span-3">
           <button class="reel" type="button" data-reel="DMoCFb3Jmib" data-reel-title="João Kléber na DOCS">
-            <span class="reel__pic"><img src="assets/img/reel-DMoCFb3Jmib-720.webp" srcset="assets/img/reel-DMoCFb3Jmib-360.webp 360w, assets/img/reel-DMoCFb3Jmib-720.webp 720w" sizes="(max-width: 639px) 44vw, 280px" width="720" height="1280" alt="" loading="lazy" data-source="client" data-subject="relato de paciente"></span>
-            <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4.5 2.6v12.8c0 .8.9 1.3 1.6.9l10.3-6.4c.6-.4.6-1.3 0-1.7L6.1 1.7c-.7-.4-1.6.1-1.6.9Z" fill="currentColor"/></svg></span>
+            <span class="reel__pic"><img src="assets/img/reel-DMoCFb3Jmib-720.webp" srcset="assets/img/reel-DMoCFb3Jmib-360.webp 360w, assets/img/reel-DMoCFb3Jmib-720.webp 720w" sizes="(max-width: 639px) 44vw, 280px" width="720" height="1280" alt="" loading="lazy" data-source="client" data-subject="relato de paciente"><span class="reel__play" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M4.5 2.6v12.8c0 .8.9 1.3 1.6.9l10.3-6.4c.6-.4.6-1.3 0-1.7L6.1 1.7c-.7-.4-1.6.1-1.6.9Z" fill="currentColor"/></svg></span></span>
             <span class="reel__title">João Kléber, apresentador, com os DOCS</span>
           </button>
         </li>
@@ -256,18 +281,16 @@
     </div>
   </section>
 
-  <!-- 06 CASOS REAIS: gate de compliance (Resolução CFO 196/2019). A seção está pronta no <template id="casos-reais">
-       no fim do <main>; para publicar, mover o <section> para cá depois da validação do responsável técnico. -->
+  <!-- 06 CASOS REAIS: gate de compliance (Resolução CFO 196/2019). Pronta no <template id="casos-reais"> no fim do
+       <main>; para publicar, mover o <section> para cá depois da validação do responsável técnico. -->
 
-  <!-- 07 AVALIAÇÕES GOOGLE: trechos reais do perfil (Rafa Maccari, Laura Castello, Bella Riecken), cortados onde o
+  <!-- 07 AVALIAÇÕES GOOGLE (marfim): trechos reais (Rafa Maccari, Laura Castello, Bella Riecken), cortados onde o
        Google corta; no celular, um por vez, troca a cada 5,5 s, arrasta, pausa ao tocar e tem botão de pausa -->
-  <section class="section" id="avaliacoes" aria-labelledby="rev-h">
+  <section class="section band band--cream" id="avaliacoes" aria-labelledby="rev-h">
     <div class="wrap">
-      <div class="section-head section-head--split">
-        <div class="rev-head">
-          <img class="rev-head__g" src="assets/icons/google-icon.svg" alt="Google" width="39" height="40" loading="lazy">
-          <h2 id="rev-h">5,0 no Google. <span class="muted">Veja o que os pacientes dizem sobre a experiência.</span></h2>
-        </div>
+      <div class="head head--center rev-head">
+        <img class="rev-head__g" src="assets/icons/google-icon.svg" alt="Google" width="39" height="40" loading="lazy">
+        <h2 id="rev-h">5,0 no Google. <em>Veja o que os pacientes dizem sobre a experiência.</em></h2>
         <a class="link" href="https://www.google.com/search?q=DOCS+Clinic+Berrini+S%C3%A3o+Paulo+avalia%C3%A7%C3%B5es" target="_blank" rel="noopener">Ver as 62 avaliações no Google</a>
       </div>
       <div class="reviews" data-carousel aria-roledescription="carrossel" aria-label="Avaliações do Google">
@@ -301,16 +324,17 @@
     </div>
   </section>
 
-  <!-- 08 FAQ: perguntas de decisão (copy do briefing), em acordeão como pede o wireframe -->
-  <section class="section" id="duvidas" aria-labelledby="faq-h">
+  <!-- 08 FAQ (faixa areia): perguntas de decisão do briefing, em acordeão como pede o wireframe -->
+  <section class="section band band--sand" id="duvidas" aria-labelledby="faq-h">
     <div class="wrap grid grid--top">
-      <div class="span-6 faq-side">
-        <h2 id="faq-h">Dúvidas frequentes</h2>
-        <div class="faq-side__pic"><img src="assets/img/clinica-1400.webp" srcset="assets/img/clinica-700.webp 700w, assets/img/clinica-1400.webp 1400w" sizes="(max-width: 1023px) 92vw, 600px" width="1400" height="875" alt="Recepção da DOCS, clara, com janelas do chão ao teto" loading="lazy" data-source="client" data-subject="a clínica"></div>
+      <div class="span-5 faq-side">
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h2 id="faq-h">Antes de decidir, <em>tire suas dúvidas</em></h2>
+        <div class="faq-side__pic"><img src="assets/img/vista-720.webp" srcset="assets/img/vista-420.webp 420w, assets/img/vista-720.webp 720w" sizes="(max-width: 1023px) 92vw, 520px" width="720" height="960" alt="Vista da Ponte Estaiada a partir da janela da DOCS, ao entardecer" loading="lazy" data-source="client" data-subject="a vista da clínica"></div>
         <p>A resposta certa para o seu caso vem na avaliação, com hora marcada.</p>
         <div class="btn-row"><a class="btn btn--primary" href="https://wa.me/5511974980207?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-cta="faq">Agendar avaliação</a></div>
       </div>
-      <div class="span-6 qa">
+      <div class="span-7 qa">
         <details>
           <summary><span>Preciso desgastar os dentes para colocar lentes?</span><svg class="qa__icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8 3v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
           <div class="qa__body"><p>A necessidade de preparo depende do caso, do material escolhido e do planejamento. Na avaliação, a equipe analisa a estrutura dental e indica a abordagem adequada para preservar o máximo possível dos dentes.</p></div>
@@ -339,14 +363,22 @@
     </div>
   </section>
 
+  <!-- faixa de fechamento (café), antes do mapa e sem botão: o briefing pede que a página termine informativa -->
+  <section class="statement" aria-label="Nossa forma de atender">
+    <div class="wrap">
+      <p class="statement__text">Sua avaliação começa com uma <em>conversa,</em> não com um procedimento.</p>
+    </div>
+  </section>
+
   <!-- CASOS REAIS (pronto, desligado até a validação de compliance). Fotos de resultado do Dr. Daniel Ravagnani
        já publicadas no site atual. Para ativar: mover este <section> para o lugar do comentário 06 acima e
        incluir nome completo e CRO do responsável na linha .cases__note. -->
   <template id="casos-reais">
-    <section class="section" id="casos" aria-labelledby="casos-h">
+    <section class="section band band--cream" id="casos" aria-labelledby="casos-h">
       <div class="wrap">
-        <div class="section-head">
-          <h2 id="casos-h">Casos reais</h2>
+        <div class="head head--center">
+          <p class="eyebrow">Casos reais</p>
+          <h2 id="casos-h">Resultados planejados <em>com naturalidade</em></h2>
           <p>Arraste a linha para comparar o antes e o depois.</p>
         </div>
         <ul class="grid cases" role="list">
@@ -358,39 +390,38 @@
   </template>
 </main>
 
-<!-- 09 ONDE ESTAMOS + FOOTER: a página termina informativa, no mapa, sem CTA final (briefing; footer-visit do deal) -->
+<!-- 09 ONDE ESTAMOS + RODAPÉ: a página termina no mapa, sem CTA final (briefing) -->
 <footer class="footer closing footer--visit" id="localizacao" aria-labelledby="loc-h">
   <div class="wrap">
     <div class="closing__cta close--visit">
       <div class="grid grid--top loc">
-        <div class="span-6 loc__text">
-          <h2 id="loc-h">DOCS Clinic, Berrini, São Paulo</h2>
+        <div class="span-5 loc__text">
+          <p class="eyebrow">Onde estamos</p>
+          <h2 id="loc-h">DOCS Clinic, <em>Berrini, São Paulo</em></h2>
           <address class="loc__address">Av. Engenheiro Luís Carlos Berrini, 1748, conj. 2505<br>Itaim Bibi, São Paulo/SP</address>
-          <dl class="hours loc__hours">
+          <dl class="loc__hours">
             <dt>Segunda a sexta</dt><dd>8h às 20h</dd>
             <dt>Sábado</dt><dd>8h às 17h</dd>
           </dl>
           <a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.%20Engenheiro%20Lu%C3%ADs%20Carlos%20Berrini%2C%201748%2C%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Como chegar pelo Google Maps</a>
         </div>
-        <div class="span-6 loc__map">
-          <!-- o mapa do Google pesa ~1,6 MB de JS: carrega ao toque (facade), sobre a vista real da clínica -->
-          <img class="loc__poster" src="assets/img/vista-720.webp" srcset="assets/img/vista-420.webp 420w, assets/img/vista-720.webp 720w" sizes="(max-width: 1023px) 92vw, 600px" width="720" height="960" alt="Vista da Ponte Estaiada a partir da janela da DOCS, ao entardecer" loading="lazy" data-source="client" data-subject="a vista da clínica">
-          <button class="btn btn--secondary loc__load" type="button" data-map-src="https://maps.google.com/maps?q=DOCS%20Clinic%2C%20Av.%20Engenheiro%20Lu%C3%ADs%20Carlos%20Berrini%2C%201748%2C%20S%C3%A3o%20Paulo&amp;t=m&amp;z=16&amp;output=embed" data-map-title="Mapa da DOCS Clinic na Av. Engenheiro Luís Carlos Berrini, 1748">Mostrar o mapa aqui</button>
+        <div class="span-7 loc__map">
+          <iframe src="https://maps.google.com/maps?q=DOCS%20Clinic%2C%20Av.%20Engenheiro%20Lu%C3%ADs%20Carlos%20Berrini%2C%201748%2C%20S%C3%A3o%20Paulo&amp;t=m&amp;z=16&amp;output=embed" width="760" height="520" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da DOCS Clinic na Av. Engenheiro Luís Carlos Berrini, 1748"></iframe>
         </div>
       </div>
     </div>
     <div class="closing__links site-foot">
-    <div class="site-foot__row">
-      <a class="site-foot__logo" href="#top"><img src="assets/img/logo-docs-h-240.png" alt="DOCS Clinic" width="240" height="43" loading="lazy"></a>
-      <ul class="site-foot__contact" role="list">
-        <li><a class="link" href="https://wa.me/5511974980207" target="_blank" rel="noopener">WhatsApp da DOCS</a></li>
-        <li><a class="link" href="https://www.instagram.com/docs.clinic/" target="_blank" rel="noopener">Instagram @docs.clinic</a></li>
-      </ul>
-    </div>
-    <div class="footer__legal">
-      <span>© 2026 DOCS Clinic</span>
-      <details class="credits"><summary>Fotos dos tratamentos e da jornada: Freepik via Magnific</summary><p>Fotos dos doutores, da clínica e dos vídeos: acervo da DOCS Clinic. Fotos ilustrativas dos tratamentos e das etapas da jornada: banco de imagens licenciado Freepik, via Magnific; não retratam pacientes da clínica.</p></details>
-    </div>
+      <div class="site-foot__row">
+        <a class="site-foot__logo" href="#top"><img src="assets/img/logo-docs-h-240-light.png" alt="DOCS Clinic" width="240" height="43" loading="lazy"></a>
+        <ul class="site-foot__contact" role="list">
+          <li><a class="link" href="https://wa.me/5511974980207" target="_blank" rel="noopener">WhatsApp da DOCS</a></li>
+          <li><a class="link" href="https://www.instagram.com/docs.clinic/" target="_blank" rel="noopener">Instagram @docs.clinic</a></li>
+        </ul>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 DOCS Clinic</span>
+        <details class="credits"><summary>Fotos dos tratamentos e da jornada: Freepik via Magnific</summary><p>Fotos dos doutores, da clínica e dos vídeos: acervo da DOCS Clinic. Fotos ilustrativas dos tratamentos e das etapas da jornada: banco de imagens licenciado Freepik, via Magnific; não retratam pacientes da clínica.</p></details>
+      </div>
     </div>
   </div>
 </footer>

@@ -207,6 +207,16 @@ document.querySelectorAll('.loc__load').forEach((btn) => {
   });
 });
 
+/* ---------------------------------------------------------------- 6. ticker pause (moves longer than 5 s) */
+document.querySelectorAll('.ticker').forEach((t) => {
+  const b = t.querySelector('.ticker__pause');
+  b?.addEventListener('click', () => {
+    const paused = t.classList.toggle('is-paused');
+    b.setAttribute('aria-pressed', String(paused));
+    b.setAttribute('aria-label', paused ? 'Retomar a faixa de tratamentos' : 'Pausar a faixa de tratamentos');
+  });
+});
+
 /* ---------------------------------------------------------------- 4. before/after (casos reais) */
 document.querySelectorAll('.ba').forEach((ba) => {
   const range = ba.querySelector('.ba__range');

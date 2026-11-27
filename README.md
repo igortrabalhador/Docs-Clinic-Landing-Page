@@ -16,7 +16,11 @@ Página estática: `index.html` + `assets/`. Não precisa de build; publique a p
 6. Casos reais: pronto, mas **desligado** (ver Compliance)
 7. Avaliações Google: trechos reais, um por vez no celular (troca a cada 5,5 s, arrasta, botão de pausa)
 8. Dúvidas frequentes: acordeão com as perguntas do briefing
-9. Localização: endereço, horários e mapa (carrega ao toque), sem CTA final
+9. Localização: endereço, horários e o mapa do Google, sem CTA final
+
+Visual: faixas de cor da marca alternando por seção (marfim, areia, greige e café), títulos em Lato Light com
+palavras de destaque em itálico, fotos em moldura em arco, faixa corrida com os tratamentos (pausável) e o
+"( )" do logo como marca d'água no hero.
 
 Todos os botões dizem exatamente "Agendar avaliação" e abrem o WhatsApp (11) 97498-0207 com mensagem
 pronta; nos cards de tratamento a mensagem já cita o tratamento.
@@ -40,7 +44,7 @@ envia `video_open`; abrir o mapa envia `map_open`.
 - CRO, nome completo e área de atuação validados de cada profissional (seção Sobre os DOCS).
 - Responsável técnico e CRO no rodapé (exigência de publicidade do CFO para clínica).
 - Nova foto vertical dos dois doutores (o briefing pede; hoje é a foto do site atual).
-- Fotos dos tratamentos e da jornada são de banco licenciado (Freepik via Magnific), ilustrativas.
+- Fotos dos tratamentos e da jornada são de banco licenciado premium (Freepik via Magnific), ilustrativas.
 - Depoimentos em vídeo: substituir/ampliar para 3 a 5 relatos curtos com legenda embutida.
 - Prévia publicada em https://igortrabalhador.github.io/Docs-Clinic-Landing-Page/ (GitHub Pages). Quando o
   domínio final estiver definido, trocar `og:image`, `og:url` e a imagem do JSON-LD e ativar o `canonical`.
